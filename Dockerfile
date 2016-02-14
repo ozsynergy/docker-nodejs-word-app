@@ -28,6 +28,7 @@ RUN curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-
 RUN git clone https://github.com/amirrajan/word-finder.git && \
   cd word-finder/ && \
   npm install 
+WORKDIR /word-finder
+CMD [ "node", "server.js" ]
 
-#CMD [ "/bin/bash && cd word-finder && node server.js" ]
 
